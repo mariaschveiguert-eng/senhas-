@@ -1,1 +1,55 @@
 
+function validarSenha() {
+    const senha = document.getElementById('senha').value;
+    const barra = document.querySelector('#forca-barra div');
+    const texto = document.getElementById('feedback-texto');
+    
+    // Elementos dos requisitos
+    const reqComp = document.getElementById('req-comp');
+    const reqNum = document.getElementById('req-num');
+    const reqEsp = document.getElementById('req-esp');
+
+    let pontuacao = 0;
+    
+    // 1. Validação de Comprimento (Fator L na fórmula matemática)
+    if (senha.length >= 8) {
+        pontuacao += 35;
+        reqComp.classList.add('valido');
+    } else {
+        reqComp.classList.remove('valido');
+    }
+
+    // 2. Validação de Números (Aumenta o Pool R)
+    if (/[0-9]/.test(senha)) {
+        pontuacao += 35;
+        reqNum.classList.add('valido');
+    } else {
+        reqNum.classList.remove('valido');
+    }
+
+    // 3. Validação de Caracteres Especiais (Maximiza o Pool R)
+    if (/[!@#$%^&*(),.?":{}|<>]/.test(senha)) {
+        pontuacao += 30;
+        reqEsp.classList.add('valido');
+    } else {
+        reqEsp.classList.remove('valido');
+    }
+
+    // Atualização da Interface Baseada no Cálculo de Força
+    barra.style.width = pontuacao + '%';
+
+    if (senha.length === 0) {
+        barra.style.width = '0%';
+        texto.innerText = "Digite uma senha para iniciar a análise.";
+        barra.style.backgroundColor = '#e0e0e0';
+    } else if (pontuacao < 50) {
+        texto.innerText = "Senha Fraca (Baixa Entropia Matemática). Fácil de quebrar.";
+        barra.style.backgroundColor = '#c62828'; // Vermelho
+    } else if (pontuacao < 100) {
+        texto.innerText = "Senha Média. Adicione mais variedade de caracteres.";
+        barra.style.backgroundColor = '#ef6c00'; // Laranja
+    } else {
+        texto.innerText = "Senha Forte! Alta Entropia e resistência a ataques digitais.";
+        barra.style.backgroundColor = '#2e7d32'; // Verde
+    }
+}
