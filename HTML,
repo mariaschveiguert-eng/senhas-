@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte: Sustentabilidade & Segurança</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>Agro Forte</h1>
+        <p>O equilíbrio perfeito entre produção e meio ambiente</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2>Produção vs. Preservação</h2>
+            <p>O futuro da agricultura depende da nossa capacidade de produzir mais utilizando menos recursos. A tecnologia no campo permite o monitoramento preciso de safras, redução do uso de pesticidas e otimização da água, provando que o desenvolvimento econômico e a preservação ambiental caminham juntos.</p>
+        </section>
+
+        <section class="card">
+            <h2>Análise Crítica: Portais do Agronegócio</h2>
+            <p>Para entender como o setor se comunica, analisamos dois modelos de plataformas web:</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Critério</th>
+                            <th>Site A (Foco Comercial)</th>
+                            <th>Site B (Foco Sustentável)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Responsividade</strong></td>
+                            <td>Boa no mobile, mas com tabelas cortadas.</td>
+                            <td>Excelente. Design fluido em qualquer tela.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Acessibilidade</strong></td>
+                            <td>Baixo contraste em botões principais.</td>
+                            <td>Possui leitor de tela e alto contraste.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Segurança (Senhas)</strong></td>
+                            <td>Permite senhas simples (ex: "123456"). Criticalidade alta.</td>
+                            <td>Exige entropia mínima e autenticação em dois fatores.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="Nota">*Conclusão: O Site B se alinha melhor às diretrizes modernas de UX e segurança da informação, enquanto o Site A foca apenas na conversão imediata de vendas.*</p>
+        </section>
+
+        <section class="card">
+            <h2>Cadastro Seguro do Produtor</h2>
+            <p>Proteja seus dados do campo. Nossa validação utiliza o cálculo de <strong>Entropia de Shannon</strong> ($E = L \times \log_2(R)$) para garantir matematicamente que sua senha é segura contra ataques de força bruta.</p>
+            
+            <form id="form-seguro" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label for="senha">Digite uma senha forte:</label>
+                    <input type="password" id="senha" placeholder="Ex: @groP0derosa2026!" oninput="validarSenha()">
+                </div>
+                
+                <div id="forca-barra" class="barra-progresso"><div></div></div>
+                <p id="feedback-texto">Digite uma senha para iniciar a análise.</p>
+                
+                <ul class="requisitos">
+                    <li id="req-comp">Mínimo de 8 caracteres</li>
+                    <li id="req-num">Pelo menos um número</li>
+                    <li id="req-esp">Pelo menos um caractere especial (!@#$)</li>
+                </ul>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agro Forte - Tecnologia a serviço do Meio Ambiente</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
