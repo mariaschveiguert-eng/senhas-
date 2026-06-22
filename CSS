@@ -1,1 +1,134 @@
 
+/* Configurações Gerais e Cores do Agro */
+:root {
+    --primary: #2e7d32; /* Verde Agro */
+    --secondary: #1565c0; /* Azul Meio Ambiente */
+    --dark: #212121;
+    --light: #f5f5f5;
+    --error: #c62828;
+    --warning: #ef6c00;
+    --success: #2e7d32;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--light);
+    padding-bottom: 0.5rem;
+}
+
+/* Tabelas Responsivas */
+.table-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Formulários e Segurança */
+.form-group {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="password"] {
+    padding: 0.75rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.barra-progresso {
+    background: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+
+.barra-progresso div {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.requisitos {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.requisitos li {
+    color: var(--error);
+    font-size: 0.9rem;
+}
+
+.requisitos li.valido {
+    color: var(--success);
+    text-decoration: line-through;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--dark);
+    color: white;
+    margin-top: 4rem;
+}
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+@media (max-width: 768px) {
+    header h1 { font-size: 1.8rem; }
+    .card { padding: 1.2rem; }
+    th, td { padding: 0.5rem; font-size: 0.9rem; }
+}
